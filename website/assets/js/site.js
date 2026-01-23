@@ -1,93 +1,78 @@
-// Menu functionality
-const menuButton = document.getElementById('menu-button');
-const menuOverlay = document.getElementById('menu-overlay');
-const menuClose = document.getElementById('menu-close');
-let previousFocus = null;
-
-function openMenu() {
-    if (menuOverlay) {
-        menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
-        menuOverlay.classList.add('opacity-100');
-        previousFocus = document.activeElement;
-        // Focus close button
-        if (menuClose) {
-            menuClose.focus();
-        }
-        // Disable body scroll
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeMenu() {
-    if (menuOverlay) {
-        menuOverlay.classList.remove('opacity-100');
-        menuOverlay.classList.add('opacity-0', 'pointer-events-none');
-        document.body.style.overflow = '';
-        // Restore focus
-        if (previousFocus) {
-            previousFocus.focus();
-        }
-    }
-}
-
-if (menuButton) {
-    menuButton.addEventListener('click', openMenu);
-}
-
-if (menuClose) {
-    menuClose.addEventListener('click', closeMenu);
-}
-
-// Close menu on Esc key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menuOverlay.classList.contains('opacity-100')) {
-        closeMenu();
-    }
-});
-
-// Carousel auto-scroll with pause on hover/focus
-const carousel = document.getElementById('carousel-container');
-
-function pauseCarousel() {
-    if (carousel) {
-        carousel.classList.add('paused');
-    }
-}
-
-function resumeCarousel() {
-    if (carousel) {
-        carousel.classList.remove('paused');
-    }
-}
-
-// Initialize carousel on load
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.getElementById('carousel-container');
-    if (carousel) {
-        const innerDiv = carousel.querySelector('div');
-        if (innerDiv) {
-            // Duplicate all logos for seamless loop
-            const logos = innerDiv.querySelectorAll('img');
-            
-            // Clone all logos to create seamless loop (need enough for smooth scrolling)
-            logos.forEach(logo => {
-                const clone = logo.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                innerDiv.appendChild(clone);
-            });
-            
-            // Pause on hover
-            carousel.addEventListener('mouseenter', pauseCarousel);
-            carousel.addEventListener('mouseleave', resumeCarousel);
-            
-            // Pause on focus
-            carousel.addEventListener('focusin', pauseCarousel);
-            carousel.addEventListener('focusout', (e) => {
-                // Only resume if focus moved outside the carousel
-                if (!carousel.contains(e.relatedTarget)) {
-                    resumeCarousel();
-                }
-            });
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    // Focusable elements inside menu for trapping focus
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const menuFocusables = menuOverlay.querySelectorAll(focusableElements);
+    const firstFocusable = menuFocusables[0];
+    const lastFocusable = menuFocusables[menuFocusables.length - 1];
+
+    let previousActiveElement;
+
+    function openMenu() {
+        previousActiveElement = document.activeElement;
+
+        menuOverlay.classList.remove('invisible', 'opacity-0');
+        menuOverlay.classList.add('visible', 'opacity-100', 'open');
+
+        document.body.style.overflow = 'hidden'; // Disable scroll
+
+        // Move focus to close button
+        closeMenuBtn.focus();
+
+        menuOverlay.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeMenu() {
+        menuOverlay.classList.remove('visible', 'opacity-100', 'open');
+        menuOverlay.classList.add('invisible', 'opacity-0');
+
+        document.body.style.overflow = ''; // Enable scroll
+
+        menuOverlay.setAttribute('aria-hidden', 'true');
+
+        // Return focus
+        if (previousActiveElement) {
+            previousActiveElement.focus();
         }
     }
+
+    // Event Listeners
+    menuBtn.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeMenu);
+
+    // Close on link click
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuOverlay.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+
+    // Trap Focus
+    menuOverlay.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            if (e.shiftKey) { // Shift + Tab
+                if (document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                }
+            } else { // Tab
+                if (document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                }
+            }
+        }
+    });
+
+    // Carousel Interaction (Pause on Hover/Focus handled via CSS mostly, but ensuring JS plays nice if we add controls later)
+    // Currently CSS handles standard hover.
 });
