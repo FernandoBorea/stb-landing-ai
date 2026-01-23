@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothies The Best</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+    <header id="header" class="bg-[var(--stb-blue)] bg-opacity-20 py-4 px-6 flex items-center justify-between sticky top-0 z-40 backdrop-blur-sm relative w-full">
+        <button id="menu-button" class="text-[var(--stb-blue)] hover:text-[var(--stb-orange)] transition-colors z-10" aria-label="Abrir menú">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <a href="#" class="flex-shrink-0 mx-auto" aria-label="Ir a inicio - Smoothies The Best">
+            <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-10 md:h-12">
+        </a>
+        <div class="w-8"></div> <!-- Spacer for centering -->
+    </header>
+    
+    <main>
+        <!-- Hero section with 3 gallons -->
+        <section id="hero" class="bg-[var(--stb-blue)] py-12 md:py-20 px-6 min-h-[600px] flex items-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                    <!-- Sandía -->
+                    <div class="flex flex-col items-center flex-1 max-w-xs">
+                        <div class="text-white text-center mb-4">
+                            <span class="font-bold text-xl md:text-2xl">Sandía</span>
+                        </div>
+                        <img src="assets/img/gallons/watermelon.png" alt="Smoothie de Sandía - Smoothies The Best" class="w-full max-w-[200px] md:max-w-[250px] h-auto object-contain" loading="eager">
+                    </div>
+                    
+                    <!-- Piña Colada -->
+                    <div class="flex flex-col items-center flex-1 max-w-xs">
+                        <div class="text-white text-center mb-4">
+                            <span class="font-bold text-xl md:text-2xl">Piña Colada</span>
+                        </div>
+                        <img src="assets/img/gallons/pina_colada.png" alt="Smoothie de Piña Colada - Smoothies The Best" class="w-full max-w-[200px] md:max-w-[250px] h-auto object-contain" loading="eager">
+                    </div>
+                    
+                    <!-- Café -->
+                    <div class="flex flex-col items-center flex-1 max-w-xs">
+                        <div class="text-white text-center mb-4">
+                            <span class="font-bold text-xl md:text-2xl">Café</span>
+                        </div>
+                        <img src="assets/img/gallons/coffee.png" alt="Smoothie de Café - Smoothies The Best" class="w-full max-w-[200px] md:max-w-[250px] h-auto object-contain" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Carousel and headline section -->
+        <section id="carousel" class="py-12 md:py-16 bg-gray-100">
+            <!-- Repeating logos -->
+            <div id="carousel-container" class="py-8 mb-8">
+                <div class="flex items-center whitespace-nowrap">
+                    <!-- Logos will be duplicated for seamless loop -->
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-30">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-30">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-40">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-40">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-30">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-30">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-40">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16 w-auto flex-shrink-0 opacity-30">
+                </div>
+            </div>
+            
+            <!-- Natural & Fresh headline -->
+            <div class="max-w-7xl mx-auto px-6 text-center py-8 md:py-12">
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-[var(--stb-blue)] tracking-tight">
+                    NATURAL & FRESH
+                </h2>
+            </div>
+        </section>
+        
+        <!-- Video card section -->
+        <section id="video-card" class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-[var(--stb-blue)]">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <source src="assets/video/stb_factory.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-[var(--stb-blue)] bg-opacity-70 flex items-center justify-center">
+                <div class="text-center px-6 z-10">
+                    <p class="text-white text-lg md:text-xl mb-2">Bienvenidos a</p>
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8">Smoothies The Best</h2>
+                    <a href="#" class="inline-block bg-white text-[var(--stb-blue)] px-8 py-4 rounded-lg font-bold text-lg md:text-xl hover:bg-opacity-90 transition-all shadow-lg border border-gray-200">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer" class="bg-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <a href="#" class="flex-shrink-0">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-12 md:h-16">
+                </a>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="#" class="bg-[var(--stb-blue)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">Productos</a>
+                    <a href="#" class="bg-[var(--stb-blue)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">¿Por qué Elegirnos?</a>
+                    <a href="#" class="bg-[var(--stb-blue)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">Clientes</a>
+                    <a href="#" class="bg-[var(--stb-blue)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">Contacto</a>
+                </div>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="flex-shrink-0" aria-label="WhatsApp">
+                    <svg class="w-12 h-12 text-green-500 hover:text-green-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .96 4.534.96 10.09c0 1.76.413 3.421 1.15 4.891L0 24l9.218-2.396a11.714 11.714 0 002.832.348c5.554 0 10.089-4.534 10.089-10.09 0-2.735-1.08-5.322-3.043-7.276"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Menu overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-[var(--stb-blue)] bg-opacity-95 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative h-full w-full flex flex-col">
+            <!-- Close button -->
+            <button id="menu-close" class="absolute top-6 right-6 text-white hover:text-[var(--stb-orange)] transition-colors z-10" aria-label="Cerrar menú">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Logo -->
+            <div class="pt-8 pl-8">
+                <a href="#" aria-label="Ir a inicio - Smoothies The Best">
+                    <img src="assets/img/logo/white_logo.png" alt="Smoothies The Best" class="h-12 md:h-16">
+                </a>
+            </div>
+            
+            <!-- Menu items -->
+            <nav class="flex-1 flex flex-col justify-center pl-8 md:pl-16 pb-32">
+                <a href="#" class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hover:text-[var(--stb-orange)] transition-colors">Productos</a>
+                <a href="#" class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hover:text-[var(--stb-orange)] transition-colors">¿Por qué Elegirnos?</a>
+                <a href="#" class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hover:text-[var(--stb-orange)] transition-colors">Clientes</a>
+                <a href="#" class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hover:text-[var(--stb-orange)] transition-colors">Contacto</a>
+            </nav>
+            
+            <!-- Decorative image -->
+            <div class="absolute bottom-0 right-0 w-full md:w-1/2 h-1/3 md:h-1/2 opacity-30">
+                <img src="assets/img/gallons/five_gallons.png" alt="" class="w-full h-full object-cover object-center" aria-hidden="true">
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/site.js"></script>
+</body>
+</html>
