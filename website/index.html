@@ -39,7 +39,7 @@
 
     <!-- Header -->
     <header
-        class="fixed top-0 left-0 w-full z-40 bg-white/90 backdrop-blur-sm border-b border-gray-100 h-20 flex items-center justify-center">
+        class="fixed top-0 left-0 w-full z-40 bg-white/90 backdrop-blur-sm border-b border-gray-100 h-28 flex items-center justify-center">
         <!-- Hamburger Button -->
         <button id="menu-btn"
             class="absolute left-6 top-1/2 -translate-y-1/2 p-2 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-md"
@@ -51,7 +51,7 @@
         </button>
 
         <!-- Logo -->
-        <a href="#" class="block h-12">
+        <a href="#" class="block h-16 md:h-20 my-3 md:my-4">
             <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-full w-auto object-contain">
         </a>
     </header>
@@ -95,31 +95,31 @@
     <main class="pt-20">
         <!-- Hero Section -->
         <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
                 <!-- Gallon 1 -->
                 <div class="flex flex-col items-center group">
                     <div
-                        class="relative w-full aspect-[3/4] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl p-8 transition-transform transform group-hover:-translate-y-2 duration-300">
+                        class="relative w-full aspect-[3/4] mb-6 flex items-center justify-center transition-transform transform group-hover:-translate-y-2 duration-300">
                         <img src="assets/img/gallons/watermelon.png" alt="Smoothie de Sandía"
-                            class="w-auto h-full max-h-80 object-contain drop-shadow-xl">
+                            class="w-full h-full max-h-none object-contain drop-shadow-xl scale-105 md:scale-110">
                     </div>
                     <h3 class="text-3xl font-black text-stb-blue uppercase tracking-wide">Sandía</h3>
                 </div>
                 <!-- Gallon 2 -->
                 <div class="flex flex-col items-center group">
                     <div
-                        class="relative w-full aspect-[3/4] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl p-8 transition-transform transform group-hover:-translate-y-2 duration-300">
+                        class="relative w-full aspect-[3/4] mb-6 flex items-center justify-center transition-transform transform group-hover:-translate-y-2 duration-300">
                         <img src="assets/img/gallons/pina_colada.png" alt="Smoothie de Piña Colada"
-                            class="w-auto h-full max-h-80 object-contain drop-shadow-xl">
+                            class="w-full h-full max-h-none object-contain drop-shadow-xl scale-105 md:scale-110">
                     </div>
                     <h3 class="text-3xl font-black text-stb-blue uppercase tracking-wide">Piña Colada</h3>
                 </div>
                 <!-- Gallon 3 -->
                 <div class="flex flex-col items-center group">
                     <div
-                        class="relative w-full aspect-[3/4] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl p-8 transition-transform transform group-hover:-translate-y-2 duration-300">
+                        class="relative w-full aspect-[3/4] mb-6 flex items-center justify-center transition-transform transform group-hover:-translate-y-2 duration-300">
                         <img src="assets/img/gallons/coffee.png" alt="Smoothie de Café"
-                            class="w-auto h-full max-h-80 object-contain drop-shadow-xl">
+                            class="w-full h-full max-h-none object-contain drop-shadow-xl scale-105 md:scale-110">
                     </div>
                     <h3 class="text-3xl font-black text-stb-blue uppercase tracking-wide">Café</h3>
                 </div>
@@ -185,7 +185,7 @@
         </section>
 
         <!-- Video Card Section -->
-        <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <section class="py-12 px-4 md:px-8 max-w-7xl xl:max-w-screen-2xl mx-auto">
             <div class="relative w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl group">
                 <!-- Video Background -->
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
