@@ -74,37 +74,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Sticky WhatsApp CTA behavior: float while scrolling, defer to footer button in footer zone
-    const stickyWhatsappBtn = document.getElementById('sticky-whatsapp-btn');
+    // Single WhatsApp CTA behavior: same footer button floats until footer enters viewport
+    const whatsappCta = document.getElementById('whatsapp-cta');
     const siteFooter = document.getElementById('site-footer');
 
-    if (stickyWhatsappBtn && siteFooter) {
-        const setStickyVisibility = (shouldHide) => {
-            stickyWhatsappBtn.classList.toggle('opacity-0', shouldHide);
-            stickyWhatsappBtn.classList.toggle('translate-y-6', shouldHide);
-            stickyWhatsappBtn.classList.toggle('scale-95', shouldHide);
-            stickyWhatsappBtn.classList.toggle('pointer-events-none', shouldHide);
+    if (whatsappCta && siteFooter) {
+        const floatingClasses = [
+            'fixed', 'bottom-5', 'left-1/2', '-translate-x-1/2', 'z-40',
+            'text-white', 'bg-green-600', 'hover:bg-green-700',
+            'shadow-xl', 'border-green-500/60', 'opacity-100', 'translate-y-0', 'scale-100'
+        ];
 
-            stickyWhatsappBtn.classList.toggle('opacity-100', !shouldHide);
-            stickyWhatsappBtn.classList.toggle('translate-y-0', !shouldHide);
-            stickyWhatsappBtn.classList.toggle('scale-100', !shouldHide);
-            stickyWhatsappBtn.setAttribute('aria-hidden', shouldHide ? 'true' : 'false');
+        const dockedClasses = [
+            'relative', 'text-green-600', 'bg-white', 'hover:text-green-700',
+            'shadow-sm', 'border-gray-200', 'hover:shadow-md'
+        ];
+
+        const hiddenMotionClasses = ['opacity-0', 'translate-y-4', 'scale-95'];
+        let dockTimeoutId;
+
+        const setFloatingState = (isFloating) => {
+            if (dockTimeoutId) {
+                window.clearTimeout(dockTimeoutId);
+                dockTimeoutId = undefined;
+            }
+
+            whatsappCta.classList.remove(...floatingClasses, ...dockedClasses, ...hiddenMotionClasses, 'pointer-events-none');
+
+            if (isFloating) {
+                whatsappCta.classList.add(...floatingClasses);
+                whatsappCta.setAttribute('aria-hidden', 'false');
+                return;
+            }
+
+            whatsappCta.classList.add(...hiddenMotionClasses, 'pointer-events-none');
+            dockTimeoutId = window.setTimeout(() => {
+                whatsappCta.classList.remove(...hiddenMotionClasses, 'pointer-events-none');
+                whatsappCta.classList.add(...dockedClasses);
+                whatsappCta.setAttribute('aria-hidden', 'false');
+            }, 180);
         };
 
-        // Fallback for environments without IntersectionObserver
+        // Initial state: floating while footer is not in view
         const fallbackToggle = () => {
             const footerTop = siteFooter.getBoundingClientRect().top;
             const footerVisible = footerTop <= (window.innerHeight - 32);
-            setStickyVisibility(footerVisible);
+            setFloatingState(!footerVisible);
         };
 
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver(
-                ([entry]) => setStickyVisibility(entry.isIntersecting),
+                ([entry]) => setFloatingState(!entry.isIntersecting),
                 {
                     root: null,
-                    threshold: 0.02,
-                    rootMargin: '0px 0px -72px 0px',
+                    threshold: 0.03,
+                    rootMargin: '0px 0px -64px 0px',
                 }
             );
             observer.observe(siteFooter);
@@ -113,6 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.addEventListener('scroll', fallbackToggle, { passive: true });
             window.addEventListener('resize', fallbackToggle);
         }
+
+        // Apply once to avoid flash of unstyled state
+        fallbackToggle();
     }
 
     // Carousel Interaction (Pause on Hover/Focus handled via CSS mostly, but ensuring JS plays nice if we add controls later)
