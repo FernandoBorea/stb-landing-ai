@@ -73,6 +73,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    // Sticky WhatsApp CTA behavior: float while scrolling, defer to footer button in footer zone
+    const stickyWhatsappBtn = document.getElementById('sticky-whatsapp-btn');
+    const siteFooter = document.getElementById('site-footer');
+
+    if (stickyWhatsappBtn && siteFooter) {
+        const setStickyVisibility = (shouldHide) => {
+            stickyWhatsappBtn.classList.toggle('opacity-0', shouldHide);
+            stickyWhatsappBtn.classList.toggle('translate-y-6', shouldHide);
+            stickyWhatsappBtn.classList.toggle('scale-95', shouldHide);
+            stickyWhatsappBtn.classList.toggle('pointer-events-none', shouldHide);
+
+            stickyWhatsappBtn.classList.toggle('opacity-100', !shouldHide);
+            stickyWhatsappBtn.classList.toggle('translate-y-0', !shouldHide);
+            stickyWhatsappBtn.classList.toggle('scale-100', !shouldHide);
+            stickyWhatsappBtn.setAttribute('aria-hidden', shouldHide ? 'true' : 'false');
+        };
+
+        // Fallback for environments without IntersectionObserver
+        const fallbackToggle = () => {
+            const footerTop = siteFooter.getBoundingClientRect().top;
+            const footerVisible = footerTop <= (window.innerHeight - 32);
+            setStickyVisibility(footerVisible);
+        };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(
+                ([entry]) => setStickyVisibility(entry.isIntersecting),
+                {
+                    root: null,
+                    threshold: 0.02,
+                    rootMargin: '0px 0px -72px 0px',
+                }
+            );
+            observer.observe(siteFooter);
+        } else {
+            fallbackToggle();
+            window.addEventListener('scroll', fallbackToggle, { passive: true });
+            window.addEventListener('resize', fallbackToggle);
+        }
+    }
+
     // Carousel Interaction (Pause on Hover/Focus handled via CSS mostly, but ensuring JS plays nice if we add controls later)
     // Currently CSS handles standard hover.
 });
