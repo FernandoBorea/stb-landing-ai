@@ -1,0 +1,53 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="50" x2="880" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FBFF"/>
+      <stop offset="0.52" stop-color="#EAF5FF"/>
+      <stop offset="1" stop-color="#FFF1E2"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(290 350) rotate(36) scale(390 310)">
+      <stop stop-color="#1F6EAD" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1F6EAD" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orangeGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(700 900) rotate(-12) scale(360 340)">
+      <stop stop-color="#E9891F" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#E9891F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave" x1="140" y1="880" x2="870" y2="1020" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F6EAD" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#F15A24" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.05"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="dropShadow" x="120" y="170" width="760" height="930" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="1200" fill="url(#bg)"/>
+  <ellipse cx="300" cy="330" rx="360" ry="280" fill="url(#blueGlow)"/>
+  <ellipse cx="700" cy="920" rx="340" ry="280" fill="url(#orangeGlow)"/>
+
+  <g opacity="0.9">
+    <path d="M-10 880C175 780 338 760 520 820C670 870 820 870 970 790V1260H-10V880Z" fill="url(#wave)"/>
+    <path d="M-20 970C170 850 360 850 540 900C700 944 840 938 980 884V1260H-20V970Z" fill="#FFFFFF" fill-opacity="0.5"/>
+  </g>
+
+  <g filter="url(#dropShadow)" opacity="0.45">
+    <ellipse cx="490" cy="900" rx="250" ry="80" fill="#1A5C90"/>
+  </g>
+
+  <g>
+    <rect x="190" y="180" width="560" height="72" rx="36" transform="rotate(-7 190 180)" fill="#E9891F" fill-opacity="0.72"/>
+    <rect x="200" y="205" width="560" height="72" rx="36" transform="rotate(-7 200 205)" fill="#F15A24" fill-opacity="0.2"/>
+  </g>
+
+  <image href="../gallons/five_gallons.png" x="145" y="248" width="670" height="760" preserveAspectRatio="xMidYMid meet"/>
+
+  <rect width="960" height="1200" filter="url(#grain)" opacity="0.8"/>
+</svg>

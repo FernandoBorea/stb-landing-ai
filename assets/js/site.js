@@ -73,6 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    // Sticky WhatsApp CTA behavior: float while scrolling, defer to footer button in footer zone
+    const stickyWhatsappBtn = document.getElementById('sticky-whatsapp-btn');
+    const footerWhatsapp = document.getElementById('footer-whatsapp');
+
+    if (stickyWhatsappBtn && footerWhatsapp) {
+        const toggleStickyButton = () => {
+            const footerTop = footerWhatsapp.getBoundingClientRect().top;
+            const viewportBottom = window.innerHeight;
+            const footerReached = footerTop <= (viewportBottom - 24);
+
+            stickyWhatsappBtn.classList.toggle('opacity-0', footerReached);
+            stickyWhatsappBtn.classList.toggle('pointer-events-none', footerReached);
+            stickyWhatsappBtn.setAttribute('aria-hidden', footerReached ? 'true' : 'false');
+        };
+
+        toggleStickyButton();
+        window.addEventListener('scroll', toggleStickyButton, { passive: true });
+        window.addEventListener('resize', toggleStickyButton);
+    }
+
     // Carousel Interaction (Pause on Hover/Focus handled via CSS mostly, but ensuring JS plays nice if we add controls later)
     // Currently CSS handles standard hover.
 });
