@@ -57,38 +57,43 @@
     </header>
 
     <!-- Full Screen Menu Overlay -->
-    <div id="menu-overlay" class="fixed inset-0 z-50 bg-stb-blue flex flex-col md:flex-row text-white overflow-hidden"
+    <div id="menu-overlay"
+        class="fixed inset-0 z-50 bg-white flex flex-col md:flex-row text-stb-blue overflow-y-auto md:overflow-hidden"
         aria-hidden="true">
         <!-- Close Button -->
         <button id="close-menu-btn"
-            class="absolute right-6 top-6 p-2 z-50 focus:outline-none focus:ring-2 focus:ring-white rounded-full bg-white/10 hover:bg-white/20 transition"
+            class="absolute right-4 top-4 md:right-8 md:top-8 p-2 z-50 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-full border border-stb-blue/20 bg-white hover:bg-stb-blue/5 transition"
             aria-label="Cerrar menú">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
 
-        <!-- Menu Items (Left/Center) -->
-        <!-- Menu Items (Left/Center) -->
+        <!-- Menu Items -->
         <nav
-            class="flex flex-col justify-center items-start px-12 md:px-24 space-y-6 md:space-y-8 z-10 w-full md:w-1/2 h-[60%] md:h-auto">
+            class="flex flex-col justify-center items-start px-6 sm:px-10 md:px-16 lg:px-24 py-24 md:py-16 space-y-5 md:space-y-8 z-10 w-full md:w-1/2 lg:w-[55%]">
             <a href="#"
-                class="menu-link text-4xl md:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Productos</a>
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Productos</a>
             <a href="#"
-                class="menu-link text-4xl md:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">¿Por
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">¿Por
                 qué Elegirnos?</a>
             <a href="#"
-                class="menu-link text-4xl md:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Clientes</a>
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Clientes</a>
             <a href="#"
-                class="menu-link text-4xl md:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Contacto</a>
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Contacto</a>
         </nav>
 
-        <!-- Decorative Image (Right - Desktop / Bottom - Mobile) -->
-        <div
-            class="flex h-[40%] md:h-full items-center justify-center bg-white/5 relative overflow-hidden w-full md:w-1/2">
-            <!-- Using gallon image as decorative element -->
-            <img src="assets/img/gallons/five_gallons.png"
-                class="object-contain w-full max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl opacity-100" alt="">
+        <!-- Gallons Art Card -->
+        <div class="w-full md:w-1/2 lg:w-[45%] px-6 pb-12 md:py-16 md:pr-16 flex items-center justify-center">
+            <div
+                class="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-stb-blue/10 bg-gradient-to-br from-stb-blue/10 via-white to-stb-orange/15">
+                <img src="assets/img/menu/menu-gallons-artistic.svg" alt="Selección artística de smoothies STB"
+                    class="absolute inset-0 w-full h-full object-contain">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-stb-blue/55 via-stb-blue/5 to-transparent flex items-end p-5 sm:p-7">
+                    <p class="text-white text-xl sm:text-2xl font-bold uppercase tracking-wide">Sabor que inspira</p>
+                </div>
+            </div>
         </div>
     </div>
 
