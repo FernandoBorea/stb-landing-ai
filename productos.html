@@ -68,7 +68,7 @@
             class="flex flex-col justify-center items-start px-6 sm:px-10 md:px-16 lg:px-24 py-24 md:py-16 space-y-5 md:space-y-8 z-10 w-full md:w-1/2 lg:w-[55%]">
             <a href="productos.html"
                 class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Productos</a>
-            <a href="#"
+            <a href="por-que-elegirnos.html"
                 class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">¿Por
                 qué Elegirnos?</a>
             <a href="#"
@@ -91,183 +91,106 @@
     </div>
 
     <main class="pt-28">
-        <section class="py-10 md:py-12 px-4 md:px-8 max-w-7xl xl:max-w-screen-2xl mx-auto">
-            <div
-                class="relative w-full aspect-[16/9] md:aspect-[21/8] rounded-3xl overflow-hidden shadow-2xl border border-stb-blue/10 bg-gradient-to-br from-stb-blue/10 via-white to-stb-orange/15">
-                <img src="assets/img/gallons/five_gallons_kitchen.png" alt="Catálogo de productos Smoothies The Best"
-                    class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent">
-                    <p
-                        class="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none text-center drop-shadow-md pt-7 sm:pt-8 md:pt-10 px-4">
-                        Catálogo de Productos
+        <!-- Hero Section -->
+        <section class="py-12 md:py-20 px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-stb-blue/10 text-stb-blue font-bold text-sm uppercase tracking-widest">Línea HORECA</div>
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-stb-blue uppercase leading-tight tracking-tight">
+                        Catálogo <br /><span class="text-stb-orange">de Productos</span>
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl leading-relaxed">
+                        Fórmulas estables y prácticas diseñadas para operaciones de alta exigencia. Simplifique su menú con nuestros smoothies 100% naturales, listos para abrir y servir.
                     </p>
+                </div>
+                <div class="flex-1 w-full max-w-2xl">
+                    <div class="relative w-full rounded-[3rem] overflow-hidden shadow-2xl border border-stb-blue/10 group">
+                        <img src="assets/img/gallons/five_gallons_kitchen.png" alt="Catálogo de productos Smoothies The Best" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="productos" class="pb-10 md:pb-14 bg-gray-50/50 px-4 md:px-8 max-w-7xl xl:max-w-screen-2xl mx-auto">
-            <div>
-                <div class="hidden md:grid md:grid-cols-3 gap-8 lg:gap-10">
-                    <article
-                        class="product-card group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300">
-                        <a href="producto-sandia.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
+        <!-- Product Grid -->
+        <section id="productos" class="py-16 md:py-24 bg-gray-50/50 px-4 md:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- Sandía -->
+                    <article class="group flex flex-col bg-white rounded-[2.5rem] p-3 shadow-lg shadow-stb-blue/5 border border-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <a href="producto-sandia.html" class="block relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-red-500/20 to-red-500/5 p-8">
                             <img src="assets/img/gallons/sandia_card.png" alt="Smoothie Sandía"
-                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
                         </a>
-                        <div class="p-5 flex flex-col flex-1">
-                            <h3 class="text-2xl font-black text-stb-blue uppercase tracking-wide">Sandía</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Refrescante y natural. Ideal para el calor.</p>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-3xl font-black text-stb-blue uppercase tracking-tight mb-3">Sandía</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">Refrescante y natural. Perfil ligero ideal para climas cálidos y alto volumen.</p>
                             <a href="producto-sandia.html"
-                                class="mt-4 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2.5 px-5 transition-colors duration-200 w-fit">
-                                Más Información
+                                class="mt-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-white border-2 border-stb-blue hover:bg-stb-blue rounded-full py-3 px-6 transition-all duration-300">
+                                Ver Detalles
                             </a>
                         </div>
                     </article>
-                    <article
-                        class="product-card group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300">
-                        <a href="producto-pina-colada.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
-                            <img src="assets/img/gallons/pina_colada_card.png" alt="Smoothie Piña Colada"
-                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                        <div class="p-5 flex flex-col flex-1">
-                            <h3 class="text-2xl font-black text-stb-blue uppercase tracking-wide">Piña Colada</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Tropical y cremoso. Un clásico que gusta a todos.</p>
-                            <a href="producto-pina-colada.html"
-                                class="mt-4 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2.5 px-5 transition-colors duration-200 w-fit">
-                                Más Información
-                            </a>
-                        </div>
-                    </article>
-                    <article
-                        class="product-card group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300">
-                        <a href="producto-cafe.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
-                            <img src="assets/img/gallons/coffee_card.png" alt="Smoothie Café"
-                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                        <div class="p-5 flex flex-col flex-1">
-                            <h3 class="text-2xl font-black text-stb-blue uppercase tracking-wide">Café</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Energía y sabor. Perfecto para cualquier momento.</p>
-                            <a href="producto-cafe.html"
-                                class="mt-4 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2.5 px-5 transition-colors duration-200 w-fit">
-                                Más Información
-                            </a>
-                        </div>
-                    </article>
-                    <article
-                        class="product-card group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300">
-                        <a href="producto-coco.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
-                            <img src="assets/img/gallons/coconut_card.png" alt="Smoothie Coco"
-                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                        <div class="p-5 flex flex-col flex-1">
-                            <h3 class="text-2xl font-black text-stb-blue uppercase tracking-wide">Coco</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Cremoso y tropical. Un escape a la playa.</p>
-                            <a href="producto-coco.html"
-                                class="mt-4 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2.5 px-5 transition-colors duration-200 w-fit">
-                                Más Información
-                            </a>
-                        </div>
-                    </article>
-                    <article
-                        class="product-card group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300">
-                        <a href="producto-maracuya.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
-                            <img src="assets/img/gallons/maracuya_card.png" alt="Smoothie Maracuyá"
-                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                        <div class="p-5 flex flex-col flex-1">
-                            <h3 class="text-2xl font-black text-stb-blue uppercase tracking-wide">Maracuyá</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Ácido y fresco. Para los que buscan algo distinto.</p>
-                            <a href="producto-maracuya.html"
-                                class="mt-4 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2.5 px-5 transition-colors duration-200 w-fit">
-                                Más Información
-                            </a>
-                        </div>
-                    </article>
-                    <article
-                        class="product-card group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300">
-                        <a href="producto-sandia.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
-                            <img src="assets/img/gallons/sandia_card.png" alt="Smoothie Sandía"
-                                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                        <div class="p-5 flex flex-col flex-1">
-                            <h3 class="text-2xl font-black text-stb-blue uppercase tracking-wide">Sandía</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Refrescante y natural. Ideal para el calor.</p>
-                            <a href="producto-sandia.html"
-                                class="mt-4 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2.5 px-5 transition-colors duration-200 w-fit">
-                                Más Información
-                            </a>
-                        </div>
-                    </article>
-                </div>
 
-                <div class="md:hidden space-y-6">
-                    <article class="product-card-mobile group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                        <a href="producto-sandia.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
-                            <img src="assets/img/gallons/sandia_card.png" alt="Smoothie Sandía"
-                                class="w-full h-full object-contain scale-105 group-hover:scale-110 transition-transform duration-300">
-                        </a>
-                        <div class="p-4">
-                            <h3 class="text-xl font-black text-stb-blue uppercase tracking-wide">Sandía</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Refrescante y natural. Ideal para el calor.</p>
-                            <a href="producto-sandia.html"
-                                class="mt-3 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2 px-4 transition-colors duration-200 w-fit text-sm">
-                                Más Información
-                            </a>
-                        </div>
-                    </article>
-                    <article class="product-card-mobile group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                        <a href="producto-pina-colada.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
+                    <!-- Piña Colada -->
+                    <article class="group flex flex-col bg-white rounded-[2.5rem] p-3 shadow-lg shadow-stb-blue/5 border border-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <a href="producto-pina-colada.html" class="block relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-yellow-400/30 to-yellow-400/5 p-8">
                             <img src="assets/img/gallons/pina_colada_card.png" alt="Smoothie Piña Colada"
-                                class="w-full h-full object-contain scale-105 group-hover:scale-110 transition-transform duration-300">
+                                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
                         </a>
-                        <div class="p-4">
-                            <h3 class="text-xl font-black text-stb-blue uppercase tracking-wide">Piña Colada</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Tropical y cremoso. Un clásico que gusta a todos.</p>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-3xl font-black text-stb-blue uppercase tracking-tight mb-3">Piña Colada</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">Tropical y cremoso. Un clásico indispensable que asegura alta rotación.</p>
                             <a href="producto-pina-colada.html"
-                                class="mt-3 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2 px-4 transition-colors duration-200 w-fit text-sm">
-                                Más Información
+                                class="mt-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-white border-2 border-stb-blue hover:bg-stb-blue rounded-full py-3 px-6 transition-all duration-300">
+                                Ver Detalles
                             </a>
                         </div>
                     </article>
-                    <article class="product-card-mobile group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                        <a href="producto-cafe.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
+
+                    <!-- Café -->
+                    <article class="group flex flex-col bg-white rounded-[2.5rem] p-3 shadow-lg shadow-stb-blue/5 border border-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <a href="producto-cafe.html" class="block relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-amber-800/20 to-amber-800/5 p-8">
                             <img src="assets/img/gallons/coffee_card.png" alt="Smoothie Café"
-                                class="w-full h-full object-contain scale-105 group-hover:scale-110 transition-transform duration-300">
+                                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
                         </a>
-                        <div class="p-4">
-                            <h3 class="text-xl font-black text-stb-blue uppercase tracking-wide">Café</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Energía y sabor. Perfecto para cualquier momento.</p>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-3xl font-black text-stb-blue uppercase tracking-tight mb-3">Café</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">Energía y sabor. Base confiable para ampliar su oferta de bebidas frías.</p>
                             <a href="producto-cafe.html"
-                                class="mt-3 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2 px-4 transition-colors duration-200 w-fit text-sm">
-                                Más Información
+                                class="mt-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-white border-2 border-stb-blue hover:bg-stb-blue rounded-full py-3 px-6 transition-all duration-300">
+                                Ver Detalles
                             </a>
                         </div>
                     </article>
-                    <article class="product-card-mobile group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                        <a href="producto-coco.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
+
+                    <!-- Coco -->
+                    <article class="group flex flex-col bg-white rounded-[2.5rem] p-3 shadow-lg shadow-stb-blue/5 border border-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <a href="producto-coco.html" class="block relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-orange-100/60 to-orange-100/10 p-8">
                             <img src="assets/img/gallons/coconut_card.png" alt="Smoothie Coco"
-                                class="w-full h-full object-contain scale-105 group-hover:scale-110 transition-transform duration-300">
+                                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
                         </a>
-                        <div class="p-4">
-                            <h3 class="text-xl font-black text-stb-blue uppercase tracking-wide">Coco</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Cremoso y tropical. Un escape a la playa.</p>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-3xl font-black text-stb-blue uppercase tracking-tight mb-3">Coco</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">Cremoso y versátil. Aporta una textura premium a múltiples recetas.</p>
                             <a href="producto-coco.html"
-                                class="mt-3 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2 px-4 transition-colors duration-200 w-fit text-sm">
-                                Más Información
+                                class="mt-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-white border-2 border-stb-blue hover:bg-stb-blue rounded-full py-3 px-6 transition-all duration-300">
+                                Ver Detalles
                             </a>
                         </div>
                     </article>
-                    <article class="product-card-mobile group flex flex-col bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                        <a href="producto-maracuya.html" class="block aspect-[4/5] overflow-hidden bg-gradient-to-b from-stb-blue/5 to-stb-orange/5">
+
+                    <!-- Maracuyá -->
+                    <article class="group flex flex-col bg-white rounded-[2.5rem] p-3 shadow-lg shadow-stb-blue/5 border border-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <a href="producto-maracuya.html" class="block relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-orange-500/20 to-orange-500/5 p-8">
                             <img src="assets/img/gallons/maracuya_card.png" alt="Smoothie Maracuyá"
-                                class="w-full h-full object-contain scale-105 group-hover:scale-110 transition-transform duration-300">
+                                class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-xl">
                         </a>
-                        <div class="p-4">
-                            <h3 class="text-xl font-black text-stb-blue uppercase tracking-wide">Maracuyá</h3>
-                            <p class="text-gray-700 mt-1.5 text-base font-semibold leading-snug">Ácido y fresco. Para los que buscan algo distinto.</p>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-3xl font-black text-stb-blue uppercase tracking-tight mb-3">Maracuyá</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-6">Cítrico y vibrante. Ideal para diferenciar su carta con notas exóticas.</p>
                             <a href="producto-maracuya.html"
-                                class="mt-3 inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-2 px-4 transition-colors duration-200 w-fit text-sm">
-                                Más Información
+                                class="mt-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-white border-2 border-stb-blue hover:bg-stb-blue rounded-full py-3 px-6 transition-all duration-300">
+                                Ver Detalles
                             </a>
                         </div>
                     </article>
@@ -297,7 +220,7 @@
 
                 <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-center">
                     <a href="productos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Productos</a>
-                    <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">¿Por qué
+                    <a href="por-que-elegirnos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">¿Por qué
                         Elegirnos?</a>
                     <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Clientes</a>
                     <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Contacto</a>
