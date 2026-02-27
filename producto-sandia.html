@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothies The Best - Sandia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stb: {
+                            blue: '#1F6EAD',
+                            orange: '#E9891F',
+                            accent: '#F15A24',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Circular Std', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <style>
+        @font-face {
+            font-family: 'Circular Std';
+            src: local('Circular Std'), local('sans-serif');
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header
+        class="fixed top-0 left-0 w-full z-40 bg-white/90 backdrop-blur-sm border-b border-gray-100 h-28 flex items-center justify-center">
+        <button id="menu-btn"
+            class="absolute left-6 top-1/2 -translate-y-1/2 p-2 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-md"
+            aria-label="Abrir menu">
+            <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+
+        <a href="index.html" class="block h-16 md:h-20 my-3 md:my-4" aria-label="Ir al inicio">
+            <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-full w-auto object-contain">
+        </a>
+    </header>
+
+    <div id="menu-overlay"
+        class="fixed inset-0 z-50 bg-white flex flex-col md:flex-row text-stb-blue overflow-y-auto md:overflow-hidden"
+        aria-hidden="true">
+        <button id="close-menu-btn"
+            class="absolute right-4 top-4 md:right-8 md:top-8 p-2 z-50 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-full border border-stb-blue/20 bg-white hover:bg-stb-blue/5 transition"
+            aria-label="Cerrar menu">
+            <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <nav
+            class="flex flex-col justify-center items-start px-6 sm:px-10 md:px-16 lg:px-24 py-24 md:py-16 space-y-5 md:space-y-8 z-10 w-full md:w-1/2 lg:w-[55%]">
+            <a href="productos.html"
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Productos</a>
+            <a href="#"
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Por
+                que elegirnos?</a>
+            <a href="#"
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Clientes</a>
+            <a href="#"
+                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Contacto</a>
+        </nav>
+
+        <div class="w-full md:w-1/2 lg:w-[45%] px-6 pb-12 md:py-16 md:pr-16 flex items-center justify-center">
+            <div
+                class="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-stb-blue/10 bg-gradient-to-br from-stb-blue/10 via-white to-stb-orange/15">
+                <img src="assets/img/gallons/sandia_cover.png" alt="Smoothie de sandia Smoothies The Best"
+                    class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-28">
+        <section class="py-10 md:py-14 px-4 md:px-8 max-w-7xl mx-auto">
+            <nav class="text-sm font-semibold uppercase tracking-widest text-stb-blue/70" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-stb-orange transition-colors">Inicio</a>
+                <span class="mx-2">/</span>
+                <a href="productos.html" class="hover:text-stb-orange transition-colors">Productos</a>
+                <span class="mx-2">/</span>
+                <span class="text-stb-blue">Sandia</span>
+            </nav>
+            <div class="mt-5 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-stb-blue uppercase leading-tight tracking-tight">
+                        Sandia
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl">
+                        Perfil refrescante para operaciones B2B con alta demanda en temporadas calidas: hoteles, beach clubs,
+                        restaurantes y cafeterias que buscan opciones ligeras, consistentes y faciles de integrar en menu.
+                        Excelente para smoothies frutales, limonadas congeladas y bebidas sin alcohol de alto volumen.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-full bg-stb-blue/10 text-stb-blue font-bold text-sm">Ideal
+                            para smoothies frutales</span>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-full bg-stb-orange/15 text-stb-orange font-bold text-sm">Perfecto
+                            en bebidas frozen</span>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm">Pensado
+                            para temporada alta</span>
+                    </div>
+
+                    <div class="mt-10 flex flex-wrap gap-3">
+                        <a href="productos.html"
+                            class="inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-3 px-6 transition-colors duration-200">
+                            Ver mas sabores
+                        </a>
+                        <a href="#"
+                            class="inline-flex items-center justify-center font-bold text-white bg-stb-orange hover:bg-stb-orange/90 rounded-full py-3 px-6 transition-colors duration-200">
+                            Solicitar informacion
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="relative rounded-3xl overflow-hidden border border-stb-blue/10 shadow-2xl bg-gradient-to-br from-stb-blue/10 via-white to-stb-orange/20">
+                    <img src="assets/img/gallons/sandia_cover.png" alt="Presentacion sandia Smoothies The Best"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-14 md:pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-5">
+                <article class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+                    <h2 class="text-xl font-black text-stb-blue uppercase tracking-wide">100% Natural</h2>
+                    <p class="mt-2 text-gray-700">
+                        Ingredientes con perfil natural para una propuesta honesta y facil de comunicar al cliente final.
+                    </p>
+                </article>
+                <article class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+                    <h2 class="text-xl font-black text-stb-blue uppercase tracking-wide">Calidad Controlada</h2>
+                    <p class="mt-2 text-gray-700">
+                        Procesos internos rigurosos para mantener consistencia en sabor, textura y seguridad del producto.
+                    </p>
+                </article>
+                <article class="rounded-2xl border border-gray-200 p-6 bg-white shadow-sm">
+                    <h2 class="text-xl font-black text-stb-blue uppercase tracking-wide">Alta Disponibilidad</h2>
+                    <p class="mt-2 text-gray-700">
+                        Inventario y operacion preparados para responder de forma continua a la demanda del canal HORECA.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <a id="sticky-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 text-white font-bold bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full shadow-xl border border-green-500/60 transition-all duration-300"
+        aria-label="Contactar por WhatsApp">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+        WhatsApp
+    </a>
+
+    <footer id="site-footer" class="bg-gray-50 pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center space-y-8">
+                <a href="index.html" class="block w-48 opacity-90 hover:opacity-100 transition" aria-label="Ir al inicio">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="w-full h-auto">
+                </a>
+
+                <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-center">
+                    <a href="productos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Productos</a>
+                    <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Por que elegirnos?</a>
+                    <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Clientes</a>
+                    <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Contacto</a>
+                </nav>
+
+                <div id="footer-whatsapp">
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-green-600 hover:text-green-700 font-bold bg-white px-6 py-3 rounded-full shadow-sm border border-gray-200 hover:shadow-md transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <p class="text-gray-400 text-sm">© 2026 Smoothies The Best. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+
+</html>
