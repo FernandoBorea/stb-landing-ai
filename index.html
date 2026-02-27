@@ -39,7 +39,7 @@
 
     <!-- Header -->
     <header
-        class="fixed top-0 left-0 w-full z-40 bg-white/90 backdrop-blur-sm border-b border-gray-100 h-28 flex items-center justify-center">
+        class="relative w-full z-50 h-28 flex items-center justify-center">
         <!-- Hamburger Button -->
         <button id="menu-btn"
             class="absolute left-6 top-1/2 -translate-y-1/2 p-2 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-md"
@@ -97,36 +97,88 @@
         </div>
     </div>
 
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+    <main class="pt-4 md:pt-8">
+        <!-- Hero Gallery Section (Products First) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16 text-center">
                 <!-- Gallon 1 -->
-                <div class="flex flex-col items-center group">
-                    <div
-                        class="relative w-full aspect-[3/4] mb-10 flex items-center justify-center transition-transform transform group-hover:-translate-y-2 duration-300">
+                <a href="producto-sandia.html" class="flex flex-col items-center group relative">
+                    <!-- Background aura visible on mobile too -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent rounded-[3rem] opacity-100 transition-opacity duration-500 -z-10 -m-4"></div>
+                    
+                    <div class="relative w-full aspect-[3/4] mb-12 flex items-center justify-center transition-transform transform group-hover:-translate-y-4 duration-500">
                         <img src="assets/img/gallons/watermelon.png" alt="Smoothie de Sandía"
-                            class="w-full h-full max-h-none object-contain drop-shadow-xl scale-105 md:scale-110">
+                            class="w-full h-full max-h-none object-contain drop-shadow-2xl scale-105 md:scale-110">
                     </div>
-                    <h3 class="text-3xl font-black text-stb-blue uppercase tracking-wide">Sandía</h3>
-                </div>
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl py-6 px-8 shadow-lg shadow-stb-blue/5 border border-red-500/10 w-full transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:border-red-500/30">
+                        <h3 class="text-4xl md:text-5xl font-black text-stb-blue uppercase tracking-tight group-hover:text-stb-orange transition-colors duration-300">Sandía</h3>
+                        <p class="mt-3 text-gray-600 font-bold text-xl uppercase tracking-widest text-sm">Refrescante y ligero</p>
+                        <span class="mt-5 inline-flex items-center justify-center font-bold text-stb-orange bg-stb-orange/10 rounded-full py-2 px-6 transition-all duration-300 w-full">
+                            Ver Detalles <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </span>
+                    </div>
+                </a>
+                
                 <!-- Gallon 2 -->
-                <div class="flex flex-col items-center group">
-                    <div
-                        class="relative w-full aspect-[3/4] mb-10 flex items-center justify-center transition-transform transform group-hover:-translate-y-2 duration-300">
+                <a href="producto-pina-colada.html" class="flex flex-col items-center group relative md:translate-y-8">
+                    <!-- Background aura visible on mobile too -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/15 to-transparent rounded-[3rem] opacity-100 transition-opacity duration-500 -z-10 -m-4"></div>
+                    
+                    <div class="relative w-full aspect-[3/4] mb-12 flex items-center justify-center transition-transform transform group-hover:-translate-y-4 duration-500">
                         <img src="assets/img/gallons/pina_colada.png" alt="Smoothie de Piña Colada"
-                            class="w-full h-full max-h-none object-contain drop-shadow-xl scale-105 md:scale-110">
+                            class="w-full h-full max-h-none object-contain drop-shadow-2xl scale-105 md:scale-110">
                     </div>
-                    <h3 class="text-3xl font-black text-stb-blue uppercase tracking-wide">Piña Colada</h3>
-                </div>
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl py-6 px-8 shadow-lg shadow-stb-blue/5 border border-yellow-400/20 w-full transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:border-yellow-400/50">
+                        <h3 class="text-4xl md:text-5xl font-black text-stb-blue uppercase tracking-tight group-hover:text-stb-orange transition-colors duration-300">Piña Colada</h3>
+                        <p class="mt-3 text-gray-600 font-bold text-xl uppercase tracking-widest text-sm">Tropical y cremoso</p>
+                        <span class="mt-5 inline-flex items-center justify-center font-bold text-stb-orange bg-stb-orange/10 rounded-full py-2 px-6 transition-all duration-300 w-full">
+                            Ver Detalles <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </span>
+                    </div>
+                </a>
+                
                 <!-- Gallon 3 -->
-                <div class="flex flex-col items-center group">
-                    <div
-                        class="relative w-full aspect-[3/4] mb-10 flex items-center justify-center transition-transform transform group-hover:-translate-y-2 duration-300">
+                <a href="producto-cafe.html" class="flex flex-col items-center group relative">
+                    <!-- Background aura visible on mobile too -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-amber-800/10 to-transparent rounded-[3rem] opacity-100 transition-opacity duration-500 -z-10 -m-4"></div>
+                    
+                    <div class="relative w-full aspect-[3/4] mb-12 flex items-center justify-center transition-transform transform group-hover:-translate-y-4 duration-500">
                         <img src="assets/img/gallons/coffee.png" alt="Smoothie de Café"
-                            class="w-full h-full max-h-none object-contain drop-shadow-xl scale-105 md:scale-110">
+                            class="w-full h-full max-h-none object-contain drop-shadow-2xl scale-105 md:scale-110">
                     </div>
-                    <h3 class="text-3xl font-black text-stb-blue uppercase tracking-wide">Café</h3>
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl py-6 px-8 shadow-lg shadow-stb-blue/5 border border-amber-800/10 w-full transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:border-amber-800/30">
+                        <h3 class="text-4xl md:text-5xl font-black text-stb-blue uppercase tracking-tight group-hover:text-stb-orange transition-colors duration-300">Café</h3>
+                        <p class="mt-3 text-gray-600 font-bold text-xl uppercase tracking-widest text-sm">Energía y sabor</p>
+                        <span class="mt-5 inline-flex items-center justify-center font-bold text-stb-orange bg-stb-orange/10 rounded-full py-2 px-6 transition-all duration-300 w-full">
+                            Ver Detalles <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Intro & CTAs Section -->
+        <section class="py-24 md:py-32 relative overflow-hidden mt-12">
+            <!-- Decorative background -->
+            <div class="absolute inset-0 bg-stb-blue/5 skew-y-3 transform origin-bottom-left -z-10"></div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-stb-orange/10 text-stb-orange font-bold text-sm tracking-widest uppercase mb-8">
+                    Operación HORECA
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-stb-blue tracking-tighter uppercase leading-tight mb-8">
+                    El Sabor <span class="text-transparent bg-clip-text bg-gradient-to-r from-stb-orange to-[#ff9d3b]">Real</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-12">
+                    Bases 100% naturales para smoothies y bebidas frías. Diseñadas para simplificar y elevar la operación de su negocio, asegurando consistencia desde el primer hasta el último vaso.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="productos.html" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-white bg-stb-orange hover:bg-stb-orange/90 rounded-full py-5 px-10 transition-all hover:-translate-y-1 shadow-xl shadow-stb-orange/30 duration-300 text-lg">
+                        Ver Catálogo Completo
+                    </a>
+                    <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-5 px-10 transition-colors duration-300 text-lg bg-white">
+                        Contactar Ventas
+                    </a>
                 </div>
             </div>
         </section>
