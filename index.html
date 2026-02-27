@@ -51,7 +51,7 @@
         </button>
 
         <!-- Logo -->
-        <a href="#" class="block h-16 md:h-20 my-3 md:my-4">
+        <a href="index.html" class="block h-16 md:h-20 my-3 md:my-4">
             <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-full w-auto object-contain">
         </a>
     </header>
@@ -71,27 +71,34 @@
 
         <!-- Menu Items -->
         <nav
-            class="flex flex-col justify-center items-start px-6 sm:px-10 md:px-16 lg:px-24 py-24 md:py-16 space-y-5 md:space-y-8 z-10 w-full md:w-1/2 lg:w-[55%]">
+            class="flex flex-col justify-center items-start lg:items-end px-6 sm:px-10 md:px-16 lg:pr-24 lg:pl-12 py-24 md:py-16 space-y-6 md:space-y-10 z-10 w-full lg:w-1/2">
             <a href="productos.html"
-                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Productos</a>
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Productos</a>
             <a href="por-que-elegirnos.html"
-                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">¿Por
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">¿Por
                 qué Elegirnos?</a>
-            <a href="#"
-                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Clientes</a>
-            <a href="#"
-                class="menu-link text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase hover:text-stb-orange transition-colors duration-300">Contacto</a>
+            <a href="aliados.html"
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Aliados</a>
+            <a href="contacto.html"
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Contacto</a>
         </nav>
 
         <!-- Gallons Art Card -->
-        <div class="w-full md:w-1/2 lg:w-[45%] px-6 pb-12 md:py-16 md:pr-16 flex items-center justify-center">
-            <div
-                class="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-stb-blue/10 bg-gradient-to-br from-stb-blue/10 via-white to-stb-orange/15">
+        <div class="w-full lg:w-1/2 px-6 pb-12 md:py-16 lg:pl-24 lg:pr-12 flex items-center justify-center lg:justify-start">
+            <div class="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 group">
+                <!-- Imagen de fondo que hace un suave zoom al hacer hover -->
                 <img src="assets/img/gallons/five_gallons_card.png" alt="Selección de smoothies STB"
-                    class="absolute inset-0 w-full h-full object-contain">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-5 sm:p-7">
-                    <p class="text-white text-xl sm:text-2xl font-bold uppercase tracking-wide">Sabor que inspira</p>
+                    class="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105">
+                
+                <!-- Overlay con gradiente más sutil y elegante -->
+                <div class="absolute inset-0 bg-gradient-to-t from-stb-blue/90 via-stb-blue/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                
+                <!-- Contenido de texto -->
+                <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+                    <div class="transform transition-transform duration-300 translate-y-4 group-hover:translate-y-0">
+                        <span class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-widest text-stb-orange bg-white rounded-full">Línea Premium</span>
+                        <p class="text-white text-3xl md:text-4xl font-black uppercase leading-tight drop-shadow-md">Sabor que<br/>Inspira</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,8 +106,8 @@
 
     <main class="pt-4 md:pt-8">
         <!-- Hero Gallery Section (Products First) -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16 text-center">
+        <section class="max-w-7xl xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-20 xl:gap-32 text-center">
                 <!-- Gallon 1 -->
                 <a href="producto-sandia.html" class="flex flex-col items-center group relative">
                     <!-- Background aura visible on mobile too -->
@@ -176,7 +183,7 @@
                     <a href="productos.html" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-white bg-stb-orange hover:bg-stb-orange/90 rounded-full py-5 px-10 transition-all hover:-translate-y-1 shadow-xl shadow-stb-orange/30 duration-300 text-lg">
                         Ver Catálogo Completo
                     </a>
-                    <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-5 px-10 transition-colors duration-300 text-lg bg-white">
+                    <a href="contacto.html" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-stb-blue hover:text-stb-orange border-2 border-stb-blue hover:border-stb-orange rounded-full py-5 px-10 transition-colors duration-300 text-lg bg-white">
                         Contactar Ventas
                     </a>
                 </div>
@@ -257,7 +264,7 @@
                         Best</h2>
 
                     <div class="mt-4">
-                        <a href="#"
+                        <a href="contacto.html"
                             class="inline-block bg-stb-orange hover:bg-stb-orange/90 text-white font-bold py-4 px-10 rounded-full transition-transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-white/20">
                             Contáctanos
                         </a>
@@ -284,7 +291,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center space-y-8">
                 <!-- Logo -->
-                <a href="#" class="block w-48 opacity-90 hover:opacity-100 transition">
+                <a href="index.html" class="block w-48 opacity-90 hover:opacity-100 transition">
                     <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="w-full h-auto">
                 </a>
 
@@ -293,8 +300,8 @@
                     <a href="productos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Productos</a>
                     <a href="por-que-elegirnos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">¿Por qué
                         Elegirnos?</a>
-                    <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Clientes</a>
-                    <a href="#" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Contacto</a>
+                    <a href="aliados.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Aliados</a>
+                    <a href="contacto.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Contacto</a>
                 </nav>
 
                 <!-- WhatsApp -->

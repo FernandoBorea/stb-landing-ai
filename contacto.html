@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothies The Best - Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stb: {
+                            blue: '#1F6EAD',
+                            orange: '#E9891F',
+                            accent: '#F15A24',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Circular Std', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <style>
+        @font-face {
+            font-family: 'Circular Std';
+            src: local('Circular Std'), local('sans-serif');
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <header class="relative w-full z-50 h-28 flex items-center justify-center bg-white border-b border-gray-100">
+        <button id="menu-btn"
+            class="absolute left-6 top-1/2 -translate-y-1/2 p-2 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-md"
+            aria-label="Abrir menu">
+            <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+
+        <a href="index.html" class="block h-16 md:h-20 my-3 md:my-4" aria-label="Ir al inicio">
+            <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="h-full w-auto object-contain">
+        </a>
+    </header>
+
+    <div id="menu-overlay"
+        class="fixed inset-0 z-50 bg-white flex flex-col md:flex-row text-stb-blue overflow-y-auto md:overflow-hidden"
+        aria-hidden="true">
+        <button id="close-menu-btn"
+            class="absolute right-4 top-4 md:right-8 md:top-8 p-2 z-50 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-full border border-stb-blue/20 bg-white hover:bg-stb-blue/5 transition"
+            aria-label="Cerrar menu">
+            <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Menu Items -->
+        <nav
+            class="flex flex-col justify-center items-start lg:items-end px-6 sm:px-10 md:px-16 lg:pr-24 lg:pl-12 py-24 md:py-16 space-y-6 md:space-y-10 z-10 w-full lg:w-1/2">
+            <a href="productos.html"
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Productos</a>
+            <a href="por-que-elegirnos.html"
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">¿Por
+                qué Elegirnos?</a>
+            <a href="aliados.html"
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Aliados</a>
+            <a href="contacto.html"
+                class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Contacto</a>
+        </nav>
+
+        <!-- Gallons Art Card -->
+        <div class="w-full lg:w-1/2 px-6 pb-12 md:py-16 lg:pl-24 lg:pr-12 flex items-center justify-center lg:justify-start">
+            <div class="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 group">
+                <img src="assets/img/gallons/five_gallons_card.png" alt="Contacto Smoothies The Best"
+                    class="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-stb-blue/90 via-stb-blue/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                
+                <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+                    <div class="transform transition-transform duration-300 translate-y-4 group-hover:translate-y-0">
+                        <span class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-widest text-stb-orange bg-white rounded-full">Hablemos</span>
+                        <p class="text-white text-3xl md:text-4xl font-black uppercase leading-tight drop-shadow-md">Conéctate<br/>con STB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-4 md:pt-8 pb-16 md:pb-24">
+        <!-- Hero Section -->
+        <section class="py-12 md:py-16 px-4 md:px-8 max-w-7xl mx-auto text-center">
+            <nav class="flex justify-center text-sm font-semibold uppercase tracking-widest text-stb-blue/70 mb-8" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-stb-orange transition-colors">Inicio</a>
+                <span class="mx-2">/</span>
+                <span class="text-stb-blue">Contacto</span>
+            </nav>
+
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-stb-blue uppercase leading-tight tracking-tight">
+                Estamos para <span class="text-stb-orange">Servirle</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                ¿Interesado en elevar su menú de bebidas? Déjenos sus datos y un asesor especializado se pondrá en contacto con usted para brindarle la mejor solución B2B.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid lg:grid-cols-5 gap-12 items-start">
+                
+                <!-- Contact Info / Copy -->
+                <div class="lg:col-span-2 space-y-8 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-stb-blue/5 border border-gray-100 h-full">
+                    <div>
+                        <h3 class="text-2xl font-black text-stb-blue uppercase mb-4">¿Por qué contactarnos?</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Nos enorgullecemos de construir relaciones a largo plazo con nuestros clientes. Como socios estratégicos, entendemos la importancia de la eficiencia, la calidad y el servicio al cliente en la industria HORECA.
+                        </p>
+                    </div>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-stb-orange/10 flex items-center justify-center mr-4 shrink-0 text-stb-orange">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <strong class="text-stb-blue block">Asesoría Comercial</strong>
+                                <span class="text-gray-500 text-sm">Soluciones a medida para su negocio.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-stb-blue/10 flex items-center justify-center mr-4 shrink-0 text-stb-blue">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            </div>
+                            <div>
+                                <strong class="text-stb-blue block">Muestras y Degustaciones</strong>
+                                <span class="text-gray-500 text-sm">Pruebe la calidad real de nuestro producto.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center mr-4 shrink-0 text-emerald-600">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong class="text-stb-blue block">Atención Rápida</strong>
+                                <span class="text-gray-500 text-sm">Disponibilidad para responder a la brevedad.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-3 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-stb-blue/10 border border-gray-100">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="nombre" class="block text-sm font-bold text-stb-blue uppercase tracking-wider">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-stb-orange focus:ring-2 focus:ring-stb-orange/20 outline-none transition-all bg-gray-50 focus:bg-white"
+                                    placeholder="Ej. Juan Pérez">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="empresa" class="block text-sm font-bold text-stb-blue uppercase tracking-wider">Empresa / Negocio</label>
+                                <input type="text" id="empresa" name="empresa" required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-stb-orange focus:ring-2 focus:ring-stb-orange/20 outline-none transition-all bg-gray-50 focus:bg-white"
+                                    placeholder="Nombre de su negocio">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="email" class="block text-sm font-bold text-stb-blue uppercase tracking-wider">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-stb-orange focus:ring-2 focus:ring-stb-orange/20 outline-none transition-all bg-gray-50 focus:bg-white"
+                                    placeholder="ejemplo@correo.com">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="telefono" class="block text-sm font-bold text-stb-blue uppercase tracking-wider">Teléfono (Opcional)</label>
+                                <input type="tel" id="telefono" name="telefono"
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-stb-orange focus:ring-2 focus:ring-stb-orange/20 outline-none transition-all bg-gray-50 focus:bg-white"
+                                    placeholder="+503 1234 5678">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="asunto" class="block text-sm font-bold text-stb-blue uppercase tracking-wider">Asunto</label>
+                            <select id="asunto" name="asunto" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-stb-orange focus:ring-2 focus:ring-stb-orange/20 outline-none transition-all bg-gray-50 focus:bg-white appearance-none cursor-pointer">
+                                <option value="" disabled selected>Seleccione un motivo</option>
+                                <option value="cotizacion">Cotización / Información Comercial</option>
+                                <option value="degustacion">Solicitar Degustación</option>
+                                <option value="distribucion">Convertirse en Distribuidor</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="mensaje" class="block text-sm font-bold text-stb-blue uppercase tracking-wider">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-stb-orange focus:ring-2 focus:ring-stb-orange/20 outline-none transition-all bg-gray-50 focus:bg-white resize-none"
+                                placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-stb-orange hover:bg-stb-orange/90 text-white font-black uppercase tracking-widest py-4 px-8 rounded-full transition-transform hover:-translate-y-1 shadow-lg shadow-stb-orange/30">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky WhatsApp Button -->
+    <a id="sticky-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 text-white font-bold bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full shadow-xl border border-green-500/60 transition-all duration-300"
+        aria-label="Contactar por WhatsApp">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+        WhatsApp
+    </a>
+
+    <!-- Footer -->
+    <footer id="site-footer" class="bg-white pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center space-y-8">
+                <a href="index.html" class="block w-48 opacity-90 hover:opacity-100 transition" aria-label="Ir al inicio">
+                    <img src="assets/img/logo/blue_logo.png" alt="Smoothies The Best" class="w-full h-auto">
+                </a>
+
+                <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-center">
+                    <a href="productos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Productos</a>
+                    <a href="por-que-elegirnos.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">¿Por qué
+                        elegirnos?</a>
+                    <a href="aliados.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Aliados</a>
+                    <a href="contacto.html" class="text-stb-blue text-xl font-bold hover:text-stb-orange transition">Contacto</a>
+                </nav>
+
+                <div id="footer-whatsapp">
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-green-600 hover:text-green-700 font-bold bg-gray-50 px-6 py-3 rounded-full shadow-sm border border-gray-200 hover:shadow-md hover:bg-white transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <p class="text-gray-400 text-sm">© 2026 Smoothies The Best. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+
+</html>
