@@ -17,25 +17,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Marquee Animation for Carousel */
-.marquee-container {
+.logo-marquee {
+  --logo-gap: clamp(2.5rem, 6vw, 6rem);
+  --logo-loop-gap: clamp(4rem, 9vw, 8rem);
+  --logo-height: clamp(3.1rem, 6.5vw, 4.5rem);
+  --marquee-duration: 36s;
   overflow: hidden;
-  white-space: nowrap;
-  position: relative;
+  padding: 1.8rem 0;
 }
 
-.marquee-content {
-  display: inline-flex;
-  animation: marquee 46s linear infinite;
+.logo-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee-scroll var(--marquee-duration) linear infinite;
+  will-change: transform;
 }
 
-.marquee-content:hover,
-.marquee-content:focus-within {
+.logo-marquee:hover .logo-marquee__track,
+.logo-marquee:focus-within .logo-marquee__track {
   animation-play-state: paused;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.logo-marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--logo-gap);
+  padding-right: var(--logo-loop-gap);
+}
+
+.logo-marquee__logo {
+  height: var(--logo-height);
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(1);
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+}
+
+.logo-marquee__logo:hover,
+.logo-marquee__logo:focus-visible {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.03);
+}
+
+@keyframes logo-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 /* Menu Overlay */
