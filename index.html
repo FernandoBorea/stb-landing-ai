@@ -58,20 +58,30 @@
 
     <!-- Full Screen Menu Overlay -->
     <div id="menu-overlay"
-        class="fixed inset-0 z-50 bg-white flex flex-col md:flex-row text-stb-blue overflow-y-auto md:overflow-hidden"
+        class="fixed inset-0 z-50 bg-white flex flex-col text-stb-blue overflow-hidden"
         aria-hidden="true">
-        <!-- Close Button -->
-        <button id="close-menu-btn"
-            class="absolute right-4 top-4 md:right-8 md:top-8 p-2 z-50 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-full border border-stb-blue/20 bg-white hover:bg-stb-blue/5 transition"
-            aria-label="Cerrar menú">
-            <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+        <!-- Top bar: logo + close (close stays first in DOM for initial focus) -->
+        <div
+            class="relative shrink-0 flex items-center justify-center min-h-[4.5rem] md:min-h-[5.5rem] px-14 md:px-20 border-b border-gray-100 bg-white z-20">
+            <button id="close-menu-btn" type="button"
+                class="absolute right-4 top-1/2 -translate-y-1/2 md:right-8 p-2 z-30 focus:outline-none focus:ring-2 focus:ring-stb-blue rounded-full border border-stb-blue/20 bg-white hover:bg-stb-blue/5 transition"
+                aria-label="Cerrar menú">
+                <svg class="w-8 h-8 text-stb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="index.html"
+                class="menu-link block h-12 md:h-14 my-1 focus:outline-none focus:ring-2 focus:ring-stb-blue focus:ring-offset-2 rounded-md"
+                aria-label="Smoothies The Best — Inicio">
+                <img src="assets/img/logo/blue_logo.png" alt="" class="h-full w-auto object-contain mx-auto">
+            </a>
+        </div>
 
+        <div
+            class="flex flex-col md:flex-row flex-1 min-h-0 w-full overflow-y-auto md:overflow-hidden">
         <!-- Menu Items -->
         <nav
-            class="flex flex-col justify-center items-start lg:items-end px-6 sm:px-10 md:px-16 lg:pr-24 lg:pl-12 py-24 md:py-16 space-y-6 md:space-y-10 z-10 w-full lg:w-1/2">
+            class="flex flex-col justify-center items-start lg:items-end px-6 sm:px-10 md:px-16 lg:pr-24 lg:pl-12 pt-10 pb-16 md:pt-12 md:pb-16 space-y-6 md:space-y-10 z-10 w-full lg:w-1/2">
             <a href="productos.html"
                 class="menu-link text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase hover:text-stb-orange transition-all duration-300 transform hover:translate-x-4 lg:hover:-translate-x-4">Productos</a>
             <a href="por-que-elegirnos.html"
@@ -91,6 +101,7 @@
                         class="w-full max-h-[min(52vh,440px)] h-auto object-contain object-center transition-transform duration-700 group-hover:scale-105" />
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
@@ -198,9 +209,9 @@
 
     </main>
 
-    <!-- Sticky WhatsApp CTA -->
+    <!-- Sticky WhatsApp CTA (above menu overlay z-50) -->
     <a id="sticky-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
-        class="fixed bottom-5 right-5 z-40 flex items-center justify-center text-white bg-green-600 hover:bg-green-700 hover:scale-110 w-14 h-14 rounded-full shadow-xl border border-green-500/60 transition-all duration-300"
+        class="fixed bottom-5 right-5 z-[60] flex items-center justify-center text-white bg-green-600 hover:bg-green-700 hover:scale-110 w-14 h-14 rounded-full shadow-xl border border-green-500/60 transition-all duration-300"
         aria-label="Contactar por WhatsApp">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path
